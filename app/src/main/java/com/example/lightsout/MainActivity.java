@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     View.OnClickListener buttonListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Button current = (Button) v;
+            Button current = (Button) view;
             for (int i = 0; i < grid.getChildCount(); i++){
                 Button gridButton = (Button) grid.getChildAt(i);
 
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             }
             recolor();
         }
-    }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
             int col = i % GRID_SIZE;
 
             if (cellState[row][col]) { // == true
-                gridButton.setBackgroundColor(getColor(R.color.Teal));
+                gridButton.setBackgroundColor(getColor(R.color.teal));
             } else {
                 gridButton.setBackgroundColor(getColor(R.color.black));
             }
