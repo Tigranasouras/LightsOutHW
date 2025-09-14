@@ -46,8 +46,17 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
         grid = findViewById(R.id.light_grid);
+        Button btnRandomize = findViewById(R.id.Randomizebutton);
+        btnRandomize.setOnClickListener(new View.OnClickListener() {
 
-        randomize();
+            @Override
+            public void onClick(View v) {
+                randomize();
+                recolor();
+            }
+        });
+
+        //randomize();
         recolor();
 
         for (int i = 0; i < grid.getChildCount(); i++){
