@@ -47,8 +47,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         grid = findViewById(R.id.light_grid);
 
-//      randomize();
-
+        randomize();
         recolor();
 
         for (int i = 0; i < grid.getChildCount(); i++){
